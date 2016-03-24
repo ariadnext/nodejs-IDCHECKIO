@@ -1,5 +1,5 @@
 {
-  "name": "nodeIDCHECKIO",
+  "name": "idcheckio",
   "description": "NodeJS client library for idcheck.io API",
   "version": "0.0.1",
   "author": "jandre <julien.andre@ariadnext.com>",
@@ -10,7 +10,7 @@
   "homepage":"https://www.idcheck.io",
   "repository": {
     "type": "git",
-    "url": "git://github.com/ariadnext/IDCheckIO"
+    "url": "git@github.com:ariadnext/nodejs-IDCHECKIO.git"
   },
   "dependencies": {
     "restify-clients": "*"
