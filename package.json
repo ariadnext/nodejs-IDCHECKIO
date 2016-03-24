@@ -1,0 +1,43 @@
+{
+  "name": "nodeIDCHECKIO",
+  "description": "NodeJS client library for idcheck.io API",
+  "version": "0.0.1",
+  "author": "jandre <julien.andre@ariadnext.com>",
+  "private": false,
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "homepage":"https://www.idcheck.io",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ariadnext/IDCheckIO"
+  },
+  "dependencies": {
+    "restify-clients": "*"
+  },
+  "devDependencies": {
+    "unit.js": "*",
+    "mocha":"*"
+  },
+  "main": "./lib/idcheckio.js",
+  "scripts": {
+    "test": "mocha  --debug test/test.js"
+  },
+  "keywords": [
+    "idcheckio",
+    "id",
+    "verifications",
+    "passport",
+    "verification",
+    "visa",
+    "driving",
+    "licence",
+    "permit",
+    "de",
+    "sejour",
+    "passeport",
+    "carte",
+    "d'identite"
+  ],
+  "license": "ISC"
+}
