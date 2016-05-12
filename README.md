@@ -1,6 +1,5 @@
 # IDCHECKIO 
 The ID document checking NodeJS library.
-**EN COURS DE DEV / TESTS : v0.0.1**
 
 ![IDCHECKIO logo](https://www.idcheck.io/content/uploads/sites/2/2015/12/tick_mark.png)
 
