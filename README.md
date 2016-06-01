@@ -44,7 +44,10 @@ Fast path :
 	{
 		user : 'emailAccount@idcheckio.com',   // MANDATORY
 		pwd  : 'mypassword',				      // MANDATORY
-		language : 'EN' || 'FR'                // default: EN
+		language : 'EN' || 'FR',               // default: EN
+		protocol : 'https' || 'http',          // default: https
+		host : 'api.idcheck.io',               // default: api.idcheck.io
+		port : '443'                           // default: 443
 	}
 	
 ### analyseMRZ

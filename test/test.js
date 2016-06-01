@@ -20,11 +20,8 @@ describe('IDCHECKIO API', function() {
 
     // TEST API HOST and config
     idcio_config = {
-        protocol: 'https',
-        host: 'api-test.idcheck.io',
-        port: '',
-        user: idcio_logins.user,
-        pwd: idcio_logins.pwd
+        user: idcio_logins.userQualif,
+        pwd: idcio_logins.pwdQualif
     };
     // init
     var Idcheckio = require('../lib/idcheckio.js').idcheckio;
