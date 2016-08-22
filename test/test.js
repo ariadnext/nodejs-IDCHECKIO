@@ -20,9 +20,12 @@ describe('IDCHECKIO API', function() {
 
     // TEST API HOST and config
     idcio_config = {
-        user: idcio_logins.userQualif,
-        pwd: idcio_logins.pwdQualif
+        user: idcio_logins.prod.user,
+        pwd: idcio_logins.prod.pwd
     };
+    // surcharge pour tests en dev
+    idcio_config = idcio_logins.prod;  // prod, demo, qualif
+
     // init
     var Idcheckio = require('../lib/idcheckio.js').idcheckio;
     var idcheckio = new Idcheckio( idcio_config );
