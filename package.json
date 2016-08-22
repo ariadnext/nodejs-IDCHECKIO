@@ -1,7 +1,7 @@
 {
   "name": "idcheckio",
   "description": "NodeJS client library for idcheck.io API",
-  "version": "2.1.2",
+  "version": "2.2.0",
   "author": "jandre <julien.andre@ariadnext.com>",
   "private": false,
   "engines": {

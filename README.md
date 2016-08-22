@@ -50,10 +50,11 @@ Fast path :
 		port : '443'                           // default: 443
 	}
 	
-### analyseMRZ
+### <a name="analyseMRZ"></a>  analyseMRZ
 Analyse MRZ lines, get result of the analysis into callback.
 
-Parameters are the three lines of MRZ, complete lines with ''.
+ - Firsts parameters are the three lines of MRZ, complete lines with ''.
+ - async : true || false : requete en mode asynchrone ( voir analyseStatus & analyseResult )
 
 Get a pdf report from the uid in result and the [getReport](#getReport) section.
 
@@ -62,17 +63,17 @@ Get a pdf report from the uid in result and the [getReport](#getReport) section.
             			  '', function(err, AnalyseResultObject){
        if(err){ throw err; }
     	console.log(JSON.stringify(AnalyseResultObject,0,2));
-    }
+    }, async = false );
     
 The [AnalyseResultObject](#AnalyseResultObject) is described below.
 
 
-### analyseImage
-
+### <a name="analyseImage"></a> analyseImage
 Analyse an image (pdf, jpg, png, tiff), get result of the analysis into callback.
 
  - MANDATORY First parameter is the document face ( the MRZ is visible ) encoded in base64.
  - Secound parameter is the document back ( face without MRZ ), '' if no  face.
+ - async : true || false : requete en mode asynchrone ( voir analyseStatus & analyseResult )
 
 Get a pdf report from the uid in result and the [getReport](#getReport) section.
 
@@ -81,7 +82,7 @@ Get a pdf report from the uid in result and the [getReport](#getReport) section.
                            function(err, AnalyseResultObject){
                 if(err) { throw err; }
                 console.log(JSON.stringify(AnalyseResultObject,0,2));
-            });
+            }, async = false );
     
 The [AnalyseResultObject](#AnalyseResultObject) is described below.
 
@@ -100,6 +101,48 @@ The [ReportObject](#ReportObject) returned is described below.
 	                    console.log(JSON.stringify(result,0,2));
 	                    fs.writeFileSync("./test/testReport.pdf", res.report, 'base64');
 	                });
+	               
+	               
+### <a name="analysisStatus"></a> analysisStatus
+
+For asynchronous requests : get the analysis status.
+
+This function can be called after analyseMRZ() or analyseImage(), with uid parameter returned by these functions.
+
+- wait parameter :  Specify the maximum wait time (in ms) to wait for task completion before returning. This parameter can be used to reduce the number of time that the user will have to poll the server before detecting task completion.
+
+The [TaskDetail](#TaskDetail) returned is described below.
+
+	idcheckio.analysisStatus( '1234009234', 
+									wait = 1000,
+	                function(err, res ){
+	                    if(err) { throw err; }
+	                    console.log(JSON.stringify(result,0,2));
+	                });
+
+### <a name="analysisResult"></a> analysisResult
+
+For asynchronous AND synchronous requests : get the analysis result when analysis finished.
+
+This function can be called after analyseMRZ() or analyseImage(), with the UID parameter returned by these functions.
+
+Some optional parameters : (default false)
+ - rectoImageCropped : flag for requesting the cropped image of the sumitted frontImage
+ - signatureImageCropped : flag for requesting the signature image of the document
+ - faceImageCropped : flag for requesting the cropped image of the holder's face
+
+
+The [AnalyseResultObject](#AnalyseResultObject) returned is described below.
+
+	idcheckio.analysisResult( '1234009234', 
+									rectoImageCropped = true,
+									signatureImageCropped = false, 
+									faceImageCropped = false,
+	                function(err, res ){
+	                    if(err) { throw err; }
+	                    console.log(JSON.stringify(result,0,2));
+	                }
+	          );
 
 
 ## Test
@@ -112,8 +155,6 @@ A test folder is accessible and works with your test logins that we provided.
 #### Dependencies
 
 Need NodeJS > v0.10.0
-
-This library depends on only one other package : 
 
 ## Objects
 
@@ -202,10 +243,18 @@ Exemple of result :
 	  report: 'JVBERi0x....UVPRgo='
 	 }
 
+### <a name="TaskDetail"></a> TaskDetail
+
+	{
+	  "uid": "1234920434",
+	  "accepted": "2016-08-22T12:09:20.566+0000",
+	  "started": "2016-08-22T12:09:20.566+0000",
+	  "ended": "2016-08-22T12:09:20.742+0000",
+	  "redirectUrl": "https://api-test.idcheck.io/rest/v0/result/1234920434"
+	}
+
 
 
 ## TODO
 
  - exemple folder with sample client code (almost same as /test/test.js)
- - async mode
- - get cropped images
