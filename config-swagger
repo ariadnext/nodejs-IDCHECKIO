@@ -1,0 +1,10 @@
+{
+"moduleName": "idcheckio_nodejs_client",
+"projectName": "idcheckio_nodejs_client",
+"projectVersion": "1.0.0",
+"apiPackage": "api",
+"invokerPackage": "invoker",
+"modelPackage": "model",
+"gitRepoId":"nodejs-IDCHECKIO",
+"gitUserId":"ariadnext"
+}

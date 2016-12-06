@@ -1,0 +1,113 @@
+# idcheckio_nodejs_client.Image
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**doc** | **String** |  | [optional] 
+**face** | **String** |  | [optional] 
+**rawType** | **String** |  | [optional] 
+**light** | **String** |  | [optional] 
+
+
+<a name="DocEnum"></a>
+## Enum: DocEnum
+
+
+* `CNI_BE_SPECIMEN` (value: `"CNI_BE_SPECIMEN"`)
+
+* `CNI_BE_SPECIMEN_MRZ` (value: `"CNI_BE_SPECIMEN_MRZ"`)
+
+* `PASSEPORT_FR_SPECIMEN_NATACHA` (value: `"PASSEPORT_FR_SPECIMEN_NATACHA"`)
+
+* `PASSEPORT_FR_SPECIMEN_NATACHA_MRZ` (value: `"PASSEPORT_FR_SPECIMEN_NATACHA_MRZ"`)
+
+* `CNI_FR_SPECIMEN_BERTHIER` (value: `"CNI_FR_SPECIMEN_BERTHIER"`)
+
+* `CNI_FR_SPECIMEN_BERTHIER_MRZ` (value: `"CNI_FR_SPECIMEN_BERTHIER_MRZ"`)
+
+* `PASSEPORT_FR_SPECIMEN_GRAUX_MRZ` (value: `"PASSEPORT_FR_SPECIMEN_GRAUX_MRZ"`)
+
+* `PASSEPORT_FR_SPECIMEN_GRAUX` (value: `"PASSEPORT_FR_SPECIMEN_GRAUX"`)
+
+* `CNI_BIH_SPECIMEN` (value: `"CNI_BIH_SPECIMEN"`)
+
+* `CNI_BIH_SPECIMEN_MRZ` (value: `"CNI_BIH_SPECIMEN_MRZ"`)
+
+* `PASSEPORT_USA_FALSIFIE_TRAVELER` (value: `"PASSEPORT_USA_FALSIFIE_TRAVELER"`)
+
+* `PASSEPORT_USA_FALSIFIE_TRAVELER_MRZ` (value: `"PASSEPORT_USA_FALSIFIE_TRAVELER_MRZ"`)
+
+* `RP_FR_SPECIMEN_MARTIN` (value: `"RP_FR_SPECIMEN_MARTIN"`)
+
+* `RP_FR_SPECIMEN_MARTIN_MRZ` (value: `"RP_FR_SPECIMEN_MARTIN_MRZ"`)
+
+* `CNI_GBR_SPECIMEN_FREEMAN` (value: `"CNI_GBR_SPECIMEN_FREEMAN"`)
+
+* `CNI_GBR_SPECIMEN_FREEMAN_MRZ` (value: `"CNI_GBR_SPECIMEN_FREEMAN_MRZ"`)
+
+* `PASSEPORT_CHN_SPECIMEN_ZHENGJIAN` (value: `"PASSEPORT_CHN_SPECIMEN_ZHENGJIAN"`)
+
+* `PASSEPORT_CHN_SPECIMEN_ZHENGJIAN_MRZ` (value: `"PASSEPORT_CHN_SPECIMEN_ZHENGJIAN_MRZ"`)
+
+* `PASSEPORT_ITA_SPECIMEN_ROSSI` (value: `"PASSEPORT_ITA_SPECIMEN_ROSSI"`)
+
+* `PASSEPORT_ITA_SPECIMEN_ROSSI_MRZ` (value: `"PASSEPORT_ITA_SPECIMEN_ROSSI_MRZ"`)
+
+* `RP_GBR_SPECIMEN_IVANOVA` (value: `"RP_GBR_SPECIMEN_IVANOVA"`)
+
+* `RP_GBR_SPECIMEN_IVANOVA_MRZ` (value: `"RP_GBR_SPECIMEN_IVANOVA_MRZ"`)
+
+* `DL_FR_SPECIMEN_MARTIN` (value: `"DL_FR_SPECIMEN_MARTIN"`)
+
+* `DL_FR_SPECIMEN_MARTIN_MRZ` (value: `"DL_FR_SPECIMEN_MARTIN_MRZ"`)
+
+* `ELECTRICITE_FR_BERTHIER` (value: `"ELECTRICITE_FR_BERTHIER"`)
+
+* `IMPOSITION_FR_BERTHIER` (value: `"IMPOSITION_FR_BERTHIER"`)
+
+* `RIB_FR_BERTHIER` (value: `"RIB_FR_BERTHIER"`)
+
+* `TELEPHONE_2DDOC_BERTHIER` (value: `"TELEPHONE_2DDOC_BERTHIER"`)
+
+* `CARTE_GRISE_DUPONT` (value: `"CARTE_GRISE_DUPONT"`)
+
+* `SALAIRE_FR_BERTHIER` (value: `"SALAIRE_FR_BERTHIER"`)
+
+
+
+
+<a name="FaceEnum"></a>
+## Enum: FaceEnum
+
+
+* `RECTO` (value: `"RECTO"`)
+
+* `VERSO` (value: `"VERSO"`)
+
+
+
+
+<a name="RawTypeEnum"></a>
+## Enum: RawTypeEnum
+
+
+* `BASE64` (value: `"BASE64"`)
+
+* `JPG` (value: `"JPG"`)
+
+
+
+
+<a name="LightEnum"></a>
+## Enum: LightEnum
+
+
+* `DL` (value: `"DL"`)
+
+* `IR` (value: `"IR"`)
+
+* `UV` (value: `"UV"`)
+
+
+
+
